@@ -1,0 +1,14 @@
+.env
+.env.*
+*.key
+*.pem
+*.dpapi
+*keystore*
+.venv/
+node_modules/
+__pycache__/
+.pytest_cache/
+artifacts/
+.gltest_cache/
+broadcast/
+cache/

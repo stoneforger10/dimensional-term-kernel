@@ -1,0 +1,10 @@
+Definitions for a fictional calculation vocabulary; these do not claim any measurement or service was performed.
+
+SPAN is a distance unit, one hundredth of a metre. It is not a duration.
+BEAT is an elapsed duration equal to two minutes; a minute is sixty seconds. It has no origin shift.
+RATE measures speed: one RATE is one metre per second, not seconds per metre.
+HOT denotes an absolute temperature reading. To express a HOT reading as an absolute kelvin reading, add exactly 273.15 to the displayed HOT number. Its increments are kelvin-sized, but HOT itself is a point, not a temperature difference.
+COLD denotes an absolute kelvin temperature reading with the same numerical value as canonical kelvin. Zero COLD is a temperature origin, not a temperature interval.
+DELTA denotes a temperature difference, one kelvin per displayed unit. No 273.15 offset applies to DELTA. It is not an absolute reading.
+
+All conversions here are exact. There are no other qualifications or dependencies.

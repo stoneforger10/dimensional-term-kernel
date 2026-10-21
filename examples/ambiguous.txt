@@ -1,0 +1,1 @@
+Definitions for fictional units. A SPAN is a small distance, but its exact size is deliberately unspecified. A BEAT is a short duration, with no exact relation to seconds given. Do not invent numerical conversion factors. These names do not imply any conventional units.
