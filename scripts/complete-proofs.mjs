@@ -69,6 +69,10 @@ try{
  assert(await denied(p.address,'evaluate',[ready.input_root,'f'.repeat(64),'1@SPAN','SPAN']));
  for(const x of Object.values(p.modules))assert.equal(canonical(await moduleState(p.address,x.key)),canonical(x.state));
  for(const x of Object.values(p.calculations))assert.equal(canonical(await calculationState(p.address,x.key,ready)),canonical(x.state));
+ for(const nonce of ['bad-root','bad-dimension','bad-points','held']){
+  assert(await denied(p.address,'get_calculation',[digest({contract:p.address,actor:account.address,nonce})]));
+ }
+ p.rejected_calculations_absent=true;
  p.source=await source(p.address);assert(p.transactions.every(t=>t.verified&&t.hash&&!t.broadcast_unknown));p.final_readback_verified=true;save();
  console.log(JSON.stringify({complete:true,address:p.address,transactions:p.transactions.length,modules:Object.keys(p.modules).length,calculations:Object.keys(p.calculations).length}));
 }catch(e){console.error('Sanitized workflow stopped at '+phase+' ('+(e instanceof assert.AssertionError?'assertion':'network/receipt check')+'); inspect journal before retry');process.exitCode=1;}

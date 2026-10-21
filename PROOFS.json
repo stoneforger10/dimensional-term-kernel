@@ -1,0 +1,670 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "fixture_commit": "afd4240ea55d03cb712cb6f76c960ea96e40d4bf",
+  "account": {
+    "name": "studio-proof-deployer",
+    "address": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+  },
+  "transactions": [
+    {
+      "step": "deploy",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "deploy",
+        "--contract",
+        "contracts/DimensionalTermKernel.py"
+      ],
+      "nonce_before": "0x16a",
+      "verified": true,
+      "hash": "0x64b010624ef4c2a274d1d90052c0273422fb43b11135cec33ad57102fafc64de",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "interpret-ready",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "interpret",
+        "--args",
+        "ready",
+        "stoneforger10/dimensional-term-kernel/afd4240ea55d03cb712cb6f76c960ea96e40d4bf/examples/units.txt",
+        "c48c5746f1eba52e33d31836760530e633d089fb91d918b5c083c1edd3526970",
+        "SPAN,BEAT,RATE,HOT,COLD,DELTA"
+      ],
+      "nonce_before": "0x16b",
+      "verified": true,
+      "hash": "0xfb432bbb477268da55e73cc3fccb638149e8d4fb0db348758d77a126d07973d8",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "record-speed",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "record_calculation",
+        "--args",
+        "speed",
+        "c4935426cfe8d836f7cbf88ebce2e96477e800b2e891724d72245b853fd90773",
+        "f443b6a891cc686ddd803d12f3f8fe66fe0bdb3dba866c2f37d4ecec2129ac5f",
+        "150@SPAN 2@BEAT /",
+        "RATE"
+      ],
+      "nonce_before": "0x16c",
+      "verified": true,
+      "hash": "0x395c6da1b22744be43faeb41544823a29ff051314da5436ae4f9dfa671d23ab4",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "record-point-shift",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "record_calculation",
+        "--args",
+        "point-shift",
+        "c4935426cfe8d836f7cbf88ebce2e96477e800b2e891724d72245b853fd90773",
+        "f443b6a891cc686ddd803d12f3f8fe66fe0bdb3dba866c2f37d4ecec2129ac5f",
+        "20@HOT 5@DELTA +",
+        "COLD"
+      ],
+      "nonce_before": "0x16d",
+      "verified": true,
+      "hash": "0x7cb9459b492652343dbe3a416d55922d13c4af4d58db2e0a1be4f1aebfc435c9",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "record-point-difference",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "record_calculation",
+        "--args",
+        "point-difference",
+        "c4935426cfe8d836f7cbf88ebce2e96477e800b2e891724d72245b853fd90773",
+        "f443b6a891cc686ddd803d12f3f8fe66fe0bdb3dba866c2f37d4ecec2129ac5f",
+        "30@HOT 20@HOT -",
+        "DELTA"
+      ],
+      "nonce_before": "0x16e",
+      "verified": true,
+      "hash": "0x5aa7226e9469bd12f06e36d2f6e735563d985abec01e7273561ef0b322ed33f1",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "calculation-replay",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "record_calculation",
+        "--args",
+        "speed",
+        "c4935426cfe8d836f7cbf88ebce2e96477e800b2e891724d72245b853fd90773",
+        "f443b6a891cc686ddd803d12f3f8fe66fe0bdb3dba866c2f37d4ecec2129ac5f",
+        "1@SPAN",
+        "SPAN"
+      ],
+      "nonce_before": "0x16f",
+      "verified": true,
+      "expected_message": "Calculation nonce used",
+      "hash": "0x66c1e8e6f11df7026e9b8420d9e5dcc8a28689630fba8b022219adc5109d8ab4",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false
+    },
+    {
+      "step": "root-substitution",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "record_calculation",
+        "--args",
+        "bad-root",
+        "c4935426cfe8d836f7cbf88ebce2e96477e800b2e891724d72245b853fd90773",
+        "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "1@SPAN",
+        "SPAN"
+      ],
+      "nonce_before": "0x170",
+      "verified": true,
+      "expected_message": "Module root mismatch",
+      "hash": "0x7d8aacc1b7a5699f265bd99da431ff319f5ef588c87de4ce620f8d32cca0b873",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false
+    },
+    {
+      "step": "dimension-mismatch",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "record_calculation",
+        "--args",
+        "bad-dimension",
+        "c4935426cfe8d836f7cbf88ebce2e96477e800b2e891724d72245b853fd90773",
+        "f443b6a891cc686ddd803d12f3f8fe66fe0bdb3dba866c2f37d4ecec2129ac5f",
+        "1@SPAN 1@BEAT +",
+        "_"
+      ],
+      "nonce_before": "0x171",
+      "verified": true,
+      "expected_message": "Dimension mismatch",
+      "hash": "0xb2a972418027ac738a8fba116917248de31b46d02c83323642bff27440079e1d",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false
+    },
+    {
+      "step": "point-addition",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "record_calculation",
+        "--args",
+        "bad-points",
+        "c4935426cfe8d836f7cbf88ebce2e96477e800b2e891724d72245b853fd90773",
+        "f443b6a891cc686ddd803d12f3f8fe66fe0bdb3dba866c2f37d4ecec2129ac5f",
+        "20@HOT 10@HOT +",
+        "_"
+      ],
+      "nonce_before": "0x172",
+      "verified": true,
+      "expected_message": "Invalid point arithmetic",
+      "hash": "0x2a509e3347486b30d457e068a682a05dc4f29337c570c3ed1905c1654180706e",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false
+    },
+    {
+      "step": "interpret-bad-hash",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "interpret",
+        "--args",
+        "bad-hash",
+        "stoneforger10/dimensional-term-kernel/afd4240ea55d03cb712cb6f76c960ea96e40d4bf/examples/units.txt",
+        "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "SPAN,BEAT,RATE,HOT,COLD,DELTA"
+      ],
+      "nonce_before": "0x173",
+      "verified": true,
+      "hash": "0x009e481865ecf77dfdae7398cea9e464b5c8cebd26f1574d87eaf72102aa0e9c",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "held-definitions",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "record_calculation",
+        "--args",
+        "held",
+        "3cdf996fa53558fb6fbd24db4c4c1a138f6639f3101423442f7a1f5856c4e0ca",
+        "a696db81e51dac16c5fe2674473e5e45a12aa7be335cf3f954c706cc8e2ff57a",
+        "1@SPAN",
+        "SPAN"
+      ],
+      "nonce_before": "0x174",
+      "verified": true,
+      "expected_message": "Definitions held",
+      "hash": "0xed0835f6a4cd5594db3cb0617fd8e977273b3010e5468e75320d430b566309a9",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false
+    },
+    {
+      "step": "interpret-ambiguous",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "interpret",
+        "--args",
+        "ambiguous",
+        "stoneforger10/dimensional-term-kernel/afd4240ea55d03cb712cb6f76c960ea96e40d4bf/examples/ambiguous.txt",
+        "14f1a45ccd4ac96d8771406588054679453bc7a7006d105638f41e0589c0bf33",
+        "SPAN,BEAT"
+      ],
+      "nonce_before": "0x175",
+      "verified": true,
+      "hash": "0xb063058ea82f0d84337ea31c564a6aec63e42db55c9a7847f59c89e6c986dade",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "module-resampling",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "interpret",
+        "--args",
+        "resample",
+        "stoneforger10/dimensional-term-kernel/afd4240ea55d03cb712cb6f76c960ea96e40d4bf/examples/units.txt",
+        "c48c5746f1eba52e33d31836760530e633d089fb91d918b5c083c1edd3526970",
+        "SPAN,BEAT,RATE,HOT,COLD,DELTA"
+      ],
+      "nonce_before": "0x176",
+      "verified": true,
+      "expected_message": "Definition set already examined",
+      "hash": "0x1d7cb7c48624c6bb33d1f2591fe9b7193e31ae1fdd137c018ecbed6384018764",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false
+    },
+    {
+      "step": "creator-nonce-replay",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "interpret",
+        "--args",
+        "ready",
+        "stoneforger10/dimensional-term-kernel/afd4240ea55d03cb712cb6f76c960ea96e40d4bf/examples/ambiguous.txt",
+        "14f1a45ccd4ac96d8771406588054679453bc7a7006d105638f41e0589c0bf33",
+        "SPAN,BEAT"
+      ],
+      "nonce_before": "0x177",
+      "verified": true,
+      "expected_message": "Nonce already used",
+      "hash": "0x262c4348568fbb5ff84c6703c4636946d14dc42c06006a13129142c2d090133c",
+      "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false
+    }
+  ],
+  "modules": {
+    "ready": {
+      "key": "c4935426cfe8d836f7cbf88ebce2e96477e800b2e891724d72245b853fd90773",
+      "state": {
+        "input_root": "c4935426cfe8d836f7cbf88ebce2e96477e800b2e891724d72245b853fd90773",
+        "report": {
+          "definitions": {
+            "units": [
+              {
+                "dimension": [
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                "kind": "LINEAR",
+                "offset": [
+                  0,
+                  1
+                ],
+                "scale": [
+                  1,
+                  100
+                ],
+                "symbol": "SPAN"
+              },
+              {
+                "dimension": [
+                  0,
+                  1,
+                  0,
+                  0
+                ],
+                "kind": "LINEAR",
+                "offset": [
+                  0,
+                  1
+                ],
+                "scale": [
+                  120,
+                  1
+                ],
+                "symbol": "BEAT"
+              },
+              {
+                "dimension": [
+                  1,
+                  -1,
+                  0,
+                  0
+                ],
+                "kind": "LINEAR",
+                "offset": [
+                  0,
+                  1
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "symbol": "RATE"
+              },
+              {
+                "dimension": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "kind": "POINT",
+                "offset": [
+                  5463,
+                  20
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "symbol": "HOT"
+              },
+              {
+                "dimension": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "kind": "POINT",
+                "offset": [
+                  0,
+                  1
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "symbol": "COLD"
+              },
+              {
+                "dimension": [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                "kind": "LINEAR",
+                "offset": [
+                  0,
+                  1
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "symbol": "DELTA"
+              }
+            ]
+          },
+          "source": {
+            "body": "Definitions for a fictional calculation vocabulary; these do not claim any measurement or service was performed.\n\nSPAN is a distance unit, one hundredth of a metre. It is not a duration.\nBEAT is an elapsed duration equal to two minutes; a minute is sixty seconds. It has no origin shift.\nRATE measures speed: one RATE is one metre per second, not seconds per metre.\nHOT denotes an absolute temperature reading. To express a HOT reading as an absolute kelvin reading, add exactly 273.15 to the displayed HOT number. Its increments are kelvin-sized, but HOT itself is a point, not a temperature difference.\nCOLD denotes an absolute kelvin temperature reading with the same numerical value as canonical kelvin. Zero COLD is a temperature origin, not a temperature interval.\nDELTA denotes a temperature difference, one kelvin per displayed unit. No 273.15 offset applies to DELTA. It is not an absolute reading.\n\nAll conversions here are exact. There are no other qualifications or dependencies.\n",
+            "hash": "c48c5746f1eba52e33d31836760530e633d089fb91d918b5c083c1edd3526970",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/stoneforger10/dimensional-term-kernel/afd4240ea55d03cb712cb6f76c960ea96e40d4bf/examples/units.txt"
+          },
+          "spec": {
+            "contract": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+            "policy": "dimensional-term-kernel-v1",
+            "source": {
+              "sha256": "c48c5746f1eba52e33d31836760530e633d089fb91d918b5c083c1edd3526970",
+              "url": "https://raw.githubusercontent.com/stoneforger10/dimensional-term-kernel/afd4240ea55d03cb712cb6f76c960ea96e40d4bf/examples/units.txt"
+            },
+            "symbols": [
+              "SPAN",
+              "BEAT",
+              "RATE",
+              "HOT",
+              "COLD",
+              "DELTA"
+            ]
+          }
+        },
+        "root": "f443b6a891cc686ddd803d12f3f8fe66fe0bdb3dba866c2f37d4ecec2129ac5f",
+        "status": "READY"
+      }
+    },
+    "bad-hash": {
+      "key": "3cdf996fa53558fb6fbd24db4c4c1a138f6639f3101423442f7a1f5856c4e0ca",
+      "state": {
+        "input_root": "3cdf996fa53558fb6fbd24db4c4c1a138f6639f3101423442f7a1f5856c4e0ca",
+        "report": {
+          "definitions": {
+            "units": []
+          },
+          "source": {
+            "body": "Definitions for a fictional calculation vocabulary; these do not claim any measurement or service was performed.\n\nSPAN is a distance unit, one hundredth of a metre. It is not a duration.\nBEAT is an elapsed duration equal to two minutes; a minute is sixty seconds. It has no origin shift.\nRATE measures speed: one RATE is one metre per second, not seconds per metre.\nHOT denotes an absolute temperature reading. To express a HOT reading as an absolute kelvin reading, add exactly 273.15 to the displayed HOT number. Its increments are kelvin-sized, but HOT itself is a point, not a temperature difference.\nCOLD denotes an absolute kelvin temperature reading with the same numerical value as canonical kelvin. Zero COLD is a temperature origin, not a temperature interval.\nDELTA denotes a temperature difference, one kelvin per displayed unit. No 273.15 offset applies to DELTA. It is not an absolute reading.\n\nAll conversions here are exact. There are no other qualifications or dependencies.\n",
+            "hash": "c48c5746f1eba52e33d31836760530e633d089fb91d918b5c083c1edd3526970",
+            "http": 200,
+            "status": "HASH_MISMATCH",
+            "url": "https://raw.githubusercontent.com/stoneforger10/dimensional-term-kernel/afd4240ea55d03cb712cb6f76c960ea96e40d4bf/examples/units.txt"
+          },
+          "spec": {
+            "contract": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+            "policy": "dimensional-term-kernel-v1",
+            "source": {
+              "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+              "url": "https://raw.githubusercontent.com/stoneforger10/dimensional-term-kernel/afd4240ea55d03cb712cb6f76c960ea96e40d4bf/examples/units.txt"
+            },
+            "symbols": [
+              "SPAN",
+              "BEAT",
+              "RATE",
+              "HOT",
+              "COLD",
+              "DELTA"
+            ]
+          }
+        },
+        "root": "a696db81e51dac16c5fe2674473e5e45a12aa7be335cf3f954c706cc8e2ff57a",
+        "status": "HELD"
+      }
+    },
+    "ambiguous": {
+      "key": "1ee1677d215f1a97289cf1af64937b14815657eeb622579af19e17c2d83abee3",
+      "state": {
+        "input_root": "1ee1677d215f1a97289cf1af64937b14815657eeb622579af19e17c2d83abee3",
+        "report": {
+          "definitions": {
+            "units": [
+              {
+                "dimension": [],
+                "kind": "UNKNOWN",
+                "offset": [],
+                "scale": [],
+                "symbol": "SPAN"
+              },
+              {
+                "dimension": [],
+                "kind": "UNKNOWN",
+                "offset": [],
+                "scale": [],
+                "symbol": "BEAT"
+              }
+            ]
+          },
+          "source": {
+            "body": "Definitions for fictional units. A SPAN is a small distance, but its exact size is deliberately unspecified. A BEAT is a short duration, with no exact relation to seconds given. Do not invent numerical conversion factors. These names do not imply any conventional units.\n",
+            "hash": "14f1a45ccd4ac96d8771406588054679453bc7a7006d105638f41e0589c0bf33",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/stoneforger10/dimensional-term-kernel/afd4240ea55d03cb712cb6f76c960ea96e40d4bf/examples/ambiguous.txt"
+          },
+          "spec": {
+            "contract": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+            "policy": "dimensional-term-kernel-v1",
+            "source": {
+              "sha256": "14f1a45ccd4ac96d8771406588054679453bc7a7006d105638f41e0589c0bf33",
+              "url": "https://raw.githubusercontent.com/stoneforger10/dimensional-term-kernel/afd4240ea55d03cb712cb6f76c960ea96e40d4bf/examples/ambiguous.txt"
+            },
+            "symbols": [
+              "SPAN",
+              "BEAT"
+            ]
+          }
+        },
+        "root": "0e92dce563515fa1c6a354a2e15654f76a403b1518167f442887cafd86d9d916",
+        "status": "HELD"
+      }
+    }
+  },
+  "calculations": {
+    "speed": {
+      "key": "c1d374782219c67892ad2f5c67b0a382196d9ed636123380fe2c60d434eb26c1",
+      "state": {
+        "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "contract": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "expression": "150@SPAN 2@BEAT /",
+        "input_root": "c4935426cfe8d836f7cbf88ebce2e96477e800b2e891724d72245b853fd90773",
+        "module_root": "f443b6a891cc686ddd803d12f3f8fe66fe0bdb3dba866c2f37d4ecec2129ac5f",
+        "nonce": "speed",
+        "result": {
+          "dimension": [
+            1,
+            -1,
+            0,
+            0
+          ],
+          "kind": "LINEAR",
+          "target": "RATE",
+          "value": [
+            1,
+            160
+          ]
+        },
+        "root": "1f22f6bf9962a664c0f904da988bfe83e021fdb93b392541b943776c98cb19f2",
+        "target": "RATE"
+      }
+    },
+    "point-shift": {
+      "key": "db48a832d4f5ef7802c0958dc67cb07a0da1025775c56bbbe4f09b337de943c7",
+      "state": {
+        "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "contract": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "expression": "20@HOT 5@DELTA +",
+        "input_root": "c4935426cfe8d836f7cbf88ebce2e96477e800b2e891724d72245b853fd90773",
+        "module_root": "f443b6a891cc686ddd803d12f3f8fe66fe0bdb3dba866c2f37d4ecec2129ac5f",
+        "nonce": "point-shift",
+        "result": {
+          "dimension": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "POINT",
+          "target": "COLD",
+          "value": [
+            5963,
+            20
+          ]
+        },
+        "root": "aee8b4e8bc782f2930f8ef0e99495f0aa971e702dfe2806e87a00d782fcf86d6",
+        "target": "COLD"
+      }
+    },
+    "point-difference": {
+      "key": "97520edeff73338caca87ddda8940e023dd0df88c3a4f2295a3e7275c698a6a0",
+      "state": {
+        "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "contract": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+        "expression": "30@HOT 20@HOT -",
+        "input_root": "c4935426cfe8d836f7cbf88ebce2e96477e800b2e891724d72245b853fd90773",
+        "module_root": "f443b6a891cc686ddd803d12f3f8fe66fe0bdb3dba866c2f37d4ecec2129ac5f",
+        "nonce": "point-difference",
+        "result": {
+          "dimension": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "kind": "LINEAR",
+          "target": "DELTA",
+          "value": [
+            10,
+            1
+          ]
+        },
+        "root": "9454ddb0084bfc539d0e80d95dc195110d9ccc469538fccab05929e3bc2e0034",
+        "target": "DELTA"
+      }
+    }
+  },
+  "final_readback_verified": true,
+  "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+  "source": {
+    "address": "0xb16Ad7429d03f73A71B765D640f84B68af3e6c22",
+    "source_match": true,
+    "sha256": "09ae498077b965ebd04ab39fcf1ef5864608573df214e23a698190dcd9d05f8d"
+  }
+}

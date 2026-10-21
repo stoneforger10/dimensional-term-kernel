@@ -170,6 +170,11 @@ The separate JavaScript oracle uses BigInt arithmetic, not the contract Python.
 
 ## Deploy and reproduce
 
+[StudioNet contract](https://explorer-studio.genlayer.com/address/0xb16Ad7429d03f73A71B765D640f84B68af3e6c22)
+(chain 61999). [Fourteen finalized proof receipts](LIVE_PROOFS.md) cover seven
+successful executions and seven expected rejections. Three exact calculations
+are persisted; bad-hash and ambiguous unit sets are HELD. Deployed source matches.
+
 ```powershell
 npm install -g genlayer@0.39.2
 genlayer network set studionet
